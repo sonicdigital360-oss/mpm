@@ -599,6 +599,23 @@ section{ padding:88px 0; }
   padding:18px 20px; margin-bottom:16px;
 }
 .give-online-box h4{ margin:0 0 6px; color:var(--green-deep); font-family:var(--font-body); font-weight:700; font-size:.95rem; }
+.donate-fields{ display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+.donate-fields input{
+  flex:1; min-width:130px;
+  padding:10px 12px;
+  border:1.5px solid #DCD0AC;
+  border-radius:var(--radius);
+  font-family:var(--font-body);
+  font-size:.9rem;
+  background:#fff;
+}
+.donate-fields input:focus{
+  outline:3px solid var(--gold-light);
+  outline-offset:1px;
+  border-color:var(--gold);
+}
+.paypal-container{ min-height:44px; }
+.paypal-note{ font-size:.78rem; color:var(--ink-soft); margin-top:8px; }
 .bank-line{ display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed #E4D9B6; font-size:.92rem; }
 .bank-line:last-child{ border-bottom:none; }
 .bank-line span:first-child{ color:var(--ink-soft); }
