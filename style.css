@@ -141,7 +141,7 @@ section{ padding:88px 0; }
   color:var(--cream);
 }
 .brand-mark{
-  width:64px; height:64px;
+  width:80px; height:80px;
   border-radius:50%;
   display:flex; align-items:center; justify-content:center;
   flex:none;
@@ -160,7 +160,7 @@ section{ padding:88px 0; }
   line-height:1.15;
 }
 @media(max-width:520px){
-  .brand-mark{ width:50px; height:50px; }
+  .brand-mark{ width:60px; height:60px; }
   .brand-text .name{ font-size:1.2rem; }
 }
 .brand-text .tag{
@@ -259,9 +259,22 @@ section{ padding:88px 0; }
 }
 .slide-content h1{
   color:#fff;
-  font-size:clamp(2.1rem, 5vw, 3.6rem);
-  max-width:14ch;
-  margin-bottom:.3em;
+  font-size:clamp(1.5rem, 2.9vw, 2.35rem);
+  font-weight:500;
+  font-style:italic;
+  line-height:1.32;
+  max-width:36ch;
+  margin-bottom:.25em;
+}
+.slide-content .verse-ref{
+  display:block;
+  font-family:var(--font-body);
+  font-style:normal;
+  font-weight:700;
+  font-size:.92rem;
+  letter-spacing:.03em;
+  color:var(--gold-light);
+  margin-bottom:.6em;
 }
 .slide-content p{
   max-width:52ch;
@@ -299,18 +312,21 @@ section{ padding:88px 0; }
 @media(max-width:720px){ .hero-arrow{ display:none; } }
 
 /* Generated slide backdrops (no external photos): layered gradients + icon */
-.bg-worship{ background:radial-gradient(circle at 30% 20%, #1c6b4a, #08261C 70%); }
-.bg-healing{ background:radial-gradient(circle at 70% 25%, #2a7a4f, #0B3D2E 70%); }
-.bg-deliverance{ background:radial-gradient(circle at 40% 70%, #8a5a12, #08261C 70%); }
-.bg-outreach{ background:radial-gradient(circle at 60% 30%, #b85508, #0B3D2E 75%); }
-.bg-youth{ background:radial-gradient(circle at 35% 35%, #145C3F, #08261C 75%); }
+/* Slide backdrops: user-supplied ministry photos, blended into a dark-green vignette */
+.bg-worship{ background-image:url('assets/slide1.jpg'); background-size:cover; background-position:center; }
+.bg-healing{ background-image:url('assets/slide2.jpg'); background-size:cover; background-position:center; }
+.bg-deliverance{ background-image:url('assets/slide3.jpg'); background-size:cover; background-position:center; }
+.bg-outreach{ background-image:url('assets/slide4.jpg'); background-size:cover; background-position:center; }
+.bg-youth{ background-image:url('assets/slide5.jpg'); background-size:cover; background-position:center; }
 .slide-icon{
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:flex-end;
-  padding-right:6%;
-  opacity:.16;
+  padding-right:4%;
+  opacity:.32;
+  mask-image: radial-gradient(circle at 68% 50%, black 0%, black 32%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle at 68% 50%, black 0%, black 32%, transparent 72%);
 }
-.slide-icon svg{ width:min(38vw,420px); height:min(38vw,420px); }
+.slide-icon svg{ width:min(42vw,460px); height:min(42vw,460px); filter:blur(.3px); }
 @media(max-width:720px){ .slide-icon{ display:none; } }
 
 /* -------- Page hero (inner pages) -------- */
