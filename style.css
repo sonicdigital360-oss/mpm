@@ -141,21 +141,27 @@ section{ padding:88px 0; }
   color:var(--cream);
 }
 .brand-mark{
-  width:46px; height:46px;
+  width:64px; height:64px;
   border-radius:50%;
-  background:conic-gradient(from 200deg, var(--gold), var(--orange), var(--green), var(--gold));
   display:flex; align-items:center; justify-content:center;
   flex:none;
-  box-shadow:0 0 0 3px var(--green-deep), 0 0 0 4px var(--gold-light);
 }
-.brand-mark svg{ width:24px; height:24px; }
+.brand-mark img{
+  width:100%; height:100%;
+  object-fit:contain;
+  display:block;
+}
 .brand-text .name{
   font-family:var(--font-display);
-  font-size:1.15rem;
-  font-weight:600;
+  font-size:1.55rem;
+  font-weight:700;
   color:var(--gold-light);
   display:block;
   line-height:1.15;
+}
+@media(max-width:520px){
+  .brand-mark{ width:50px; height:50px; }
+  .brand-text .name{ font-size:1.2rem; }
 }
 .brand-text .tag{
   font-size:.72rem;
