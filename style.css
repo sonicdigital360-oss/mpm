@@ -232,13 +232,24 @@ section{ padding:88px 0; }
 .slide.active{ opacity:1; z-index:2; }
 .slide-bg{
   position:absolute; inset:0;
+  background:linear-gradient(120deg, var(--green-deep) 0%, var(--green-dark) 60%, var(--green) 100%);
+}
+.slide-media{
+  position:absolute;
+  top:0; right:0; bottom:0;
+  width:58%;
   background-size:cover;
   background-position:center;
+  mask-image:linear-gradient(to right, transparent 0%, black 20%);
+  -webkit-mask-image:linear-gradient(to right, transparent 0%, black 20%);
 }
-.slide-bg::after{
-  content:"";
-  position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(8,38,28,.25) 0%, rgba(8,38,28,.55) 55%, rgba(8,38,28,.92) 100%);
+@media(max-width:900px){
+  .slide-media{
+    width:100%;
+    opacity:.3;
+    mask-image:linear-gradient(180deg, transparent 0%, black 34%, black 100%);
+    -webkit-mask-image:linear-gradient(180deg, transparent 0%, black 34%, black 100%);
+  }
 }
 .slide-content{
   position:relative; z-index:3;
@@ -246,6 +257,10 @@ section{ padding:88px 0; }
   max-width:var(--max-w);
   margin:0 auto;
   width:100%;
+}
+.hero-slider .slide-content{ max-width:600px; margin:0; padding-left:max(28px, calc((100% - var(--max-w)) / 2 + 28px)); padding-right:16px; }
+@media(max-width:900px){
+  .hero-slider .slide-content{ max-width:640px; padding-right:28px; }
 }
 .slide-kicker{
   display:inline-block;
@@ -259,11 +274,11 @@ section{ padding:88px 0; }
 }
 .slide-content h1{
   color:#fff;
-  font-size:clamp(1.5rem, 2.9vw, 2.35rem);
+  font-size:clamp(1.1rem, 1.7vw, 1.55rem);
   font-weight:500;
   font-style:italic;
-  line-height:1.32;
-  max-width:36ch;
+  line-height:1.36;
+  max-width:32ch;
   margin-bottom:.25em;
 }
 .slide-content .verse-ref{
@@ -271,18 +286,18 @@ section{ padding:88px 0; }
   font-family:var(--font-body);
   font-style:normal;
   font-weight:700;
-  font-size:.92rem;
+  font-size:.85rem;
   letter-spacing:.03em;
   color:var(--gold-light);
   margin-bottom:.6em;
 }
 .slide-content p{
-  max-width:52ch;
-  font-size:1.08rem;
+  max-width:40ch;
+  font-size:.98rem;
   color:var(--cream);
   opacity:.92;
 }
-.slide-actions{ display:flex; gap:14px; margin-top:22px; flex-wrap:wrap; }
+.slide-actions{ display:flex; gap:8px; margin-top:22px; flex-wrap:wrap; }
 
 .hero-dots{
   position:absolute; z-index:4; bottom:26px; right:28px;
@@ -312,12 +327,12 @@ section{ padding:88px 0; }
 @media(max-width:720px){ .hero-arrow{ display:none; } }
 
 /* Generated slide backdrops (no external photos): layered gradients + icon */
-/* Slide backdrops: user-supplied ministry photos, blended into a dark-green vignette */
-.bg-worship{ background-image:url('assets/slide1.jpg'); background-size:cover; background-position:center; }
-.bg-healing{ background-image:url('assets/slide2.jpg'); background-size:cover; background-position:center; }
-.bg-deliverance{ background-image:url('assets/slide3.jpg'); background-size:cover; background-position:center; }
-.bg-outreach{ background-image:url('assets/slide4.jpg'); background-size:cover; background-position:center; }
-.bg-youth{ background-image:url('assets/slide5.jpg'); background-size:cover; background-position:center; }
+/* Slide media panel: user-supplied ministry photos, right-aligned, edge-blended only */
+.bg-worship{ background-image:url('assets/slide1.jpg'); }
+.bg-healing{ background-image:url('assets/slide2.jpg'); }
+.bg-deliverance{ background-image:url('assets/slide3.jpg'); }
+.bg-outreach{ background-image:url('assets/slide4.jpg'); }
+.bg-youth{ background-image:url('assets/slide5.jpg'); }
 .slide-icon{
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:flex-end;
