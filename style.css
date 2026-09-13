@@ -241,9 +241,9 @@ section{ padding:88px 0; }
   position:absolute;
   top:50%; right:6%;
   transform:translateY(-50%);
-  width:18%;
-  max-width:300px;
-  min-width:140px;
+  width:25%;
+  max-width:420px;
+  min-width:196px;
   aspect-ratio:1/1;
   background-size:cover;
   background-position:center;
